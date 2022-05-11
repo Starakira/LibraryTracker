@@ -1,4 +1,4 @@
-package com.lab.librarytracker.view;
+package com.lab.librarytracker.views;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
