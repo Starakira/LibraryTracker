@@ -12,7 +12,6 @@ import java.util.Calendar;
 import java.util.Date;
 
 import androidx.annotation.NonNull;
-import androidx.room.Room;
 
 public class DummyDBGenerator {
     private static final int DELAY_MILLIS = 500;

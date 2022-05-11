@@ -2,6 +2,7 @@ package com.lab.librarytracker.database;
 
 import com.lab.librarytracker.models.entities.Books;
 import com.lab.librarytracker.models.entities.Copies;
+import com.lab.librarytracker.models.relations.CopiesWithOrders;
 
 import java.util.List;
 
@@ -35,4 +36,8 @@ public interface CopyDao {
     @Transaction
     @Query("DELETE FROM copies")
     void deleteAll();
+
+    @Transaction
+    @Query("SELECT * FROM copies")
+    LiveData<List<CopiesWithOrders>> loadAllCopiesWithOrders();
 }

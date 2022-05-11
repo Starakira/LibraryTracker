@@ -32,8 +32,4 @@ public abstract class RoomDB extends RoomDatabase {
     public abstract OrderDao orderDao();
     public abstract BookDao bookDao();
     public abstract CopyDao copyDao();
-
-    public abstract UserOrdersDao userOrdersDao();
-    public abstract CopyOrdersDao copyOrdersDao();
-    public abstract BookCopiesDao bookCopiesDao();
 }

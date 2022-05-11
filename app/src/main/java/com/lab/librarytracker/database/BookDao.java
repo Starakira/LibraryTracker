@@ -1,9 +1,8 @@
 package com.lab.librarytracker.database;
 
-import com.lab.librarytracker.helper.DateConverter;
 import com.lab.librarytracker.models.entities.Books;
+import com.lab.librarytracker.models.relations.BooksWithCopies;
 
-import java.util.Date;
 import java.util.List;
 
 import androidx.lifecycle.LiveData;
@@ -39,4 +38,8 @@ public interface BookDao {
     @Transaction
     @Query("DELETE FROM books")
     void deleteAll();
+
+    @Transaction
+    @Query("SELECT * FROM books")
+    LiveData<List<BooksWithCopies>> loadAllBooksWithCopies();
 }

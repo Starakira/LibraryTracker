@@ -41,4 +41,8 @@ public interface UserDao {
     @Transaction
     @Query("DELETE FROM users")
     void deleteAll();
+
+    @Transaction
+    @Query("SELECT * FROM users")
+    LiveData<List<UsersWithOrders>> loadAllUsersWithOrders();
 }
