@@ -23,11 +23,11 @@ public interface BookDao {
 
     @Transaction
     @Query("SELECT * FROM books")
-    LiveData<List<Books>> findAllBooks();
+    LiveData<List<Books>> loadAllBooks();
 
     @Transaction
     @Query("SELECT * FROM books")
-    List<Books> findAllBooksSync();
+    List<Books> loadAllBooksSync();
 
     @Insert(onConflict = IGNORE)
     void insertBook(Books books);
